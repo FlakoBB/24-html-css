@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.colection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+}
+
+.colection .poke {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+}
+
+.colection .poke img {
+    width: 100%;
+    filter: drop-shadow(10px 10px 10px #333);
+}
+
+.poke .tooltip {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: -3.5rem;
+    transform: translateX(-50%);
+}
+
+.tooltip .tool-txt .tool-tri {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #222;
+    position: absolute;
+    left: 50%;
+    top: 99%;
+    transform: translateX(-50%);
+}
+
+.poke .tooltip .tool-txt {
+    background-color: #222;
+    color: white;
+    padding: .3rem .5rem;
+    border-radius: .6rem;
+    position: relative;
+}
+
+.colection .poke:hover img {
+    transform: translateY(-10%);
+    cursor: pointer;
+}
+
+.colection .poke:hover .tooltip {
+    visibility: visible;
+}
