@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 1rem;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+nav a {
+    background-color: burlywood;
+    border-radius: 4rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    background-color: rgb(231, 213, 188);
+}
