@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    background-color: #ccc;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.busqueda {
+    width: 80%;
+    border: 2px solid #666;
+    border-radius: 4rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: .4rem 1rem;
+    margin-top: 4rem;
+    background-color: white;
+    box-shadow: 1rem 1rem 10px 1px #888;
+}
+
+.busqueda input {
+    flex-grow: 1;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.busqueda .iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+
+.busqueda .iconos i {
+    color: #666;
+}
+
+.busqueda .iconos i:hover {
+    color: #5ea5e7;
+    cursor: pointer;
+}
+
+
+@media(max-width: 768px) {
+    .busqueda {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
