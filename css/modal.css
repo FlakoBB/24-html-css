@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    background-color: #1655ae;
+}
+
+.contenedor-modal{ 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-modal .modal {
+    width: 40rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px 1px rgb(128, 128, 219);
+}
+
+.modal .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-header img {
+    width: 4rem;
+}
+
+.modal-header .modal-txt h2 {
+    margin-bottom: .6rem;
+}
+
+.modal .modal-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .6rem;
+}
+
+.modal-btns button {
+    padding: .6rem 0;
+    width: 8rem;
+    border: 1px solid;
+    border-radius: .6rem;
+    font-size: 1.02rem;
+    font-weight: bold;
+}
+
+.modal-btns button#btn-descargar {
+    background-color: #2960ab;
+    color: white;
+    border-color: #2960ab;
+}
+
+.modal-btns button#btn-descargar:hover {
+    background-color: #4a72aa;
+    cursor: pointer;
+}
+
+.modal-btns button#btn-volver {
+    background-color: white;
+    border-color: black;
+}
+
+.modal-btns button#btn-volver:hover {
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .contenedor-modal .modal {
+        width: 90%;
+    }
+
+    .modal .modal-btns {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .modal-btns button {
+        width: 100%;
+    }
+}
