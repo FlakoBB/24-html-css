@@ -1,33 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+    color: #2960AB;
 }
 
 body {
-    padding-top: 1rem;
     width: 100vw;
     height: 100vh;
-    text-align: center;
+    background-color: #D0E7E5;
 }
 
-nav {
+section.container {
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 0 2rem;
-}
-
-nav a {
-    background-color: burlywood;
-    border-radius: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
     padding: 2rem;
-    text-decoration: none;
-    color: black;
 }
 
-nav a:hover {
-    background-color: rgb(231, 213, 188);
+.container .title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 2.5rem;
+}
+
+.container .video {
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video iframe {
+    box-shadow: 0 0 30px 10px #2960AB;
+}
+
+.container .description {
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+    padding: 0 3rem;
+}
+
+.description p {
+    font-size: 1.2rem;
+}
+
+.container .list {
+    grid-column: 1 / 2;
+    grid-row: 2 / 7;
+}
+
+.list h2 {
+    padding: .8rem .6rem;
+    border-bottom: 1px solid #2960AB;;
+}
+
+.list ul {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.list ul li {
+    border-bottom: 1px solid #2960AB;
+}
+
+.list ul li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    display: block;
+    padding: .8rem .4rem;
+}
+
+.list ul li a:hover {
+    background-color: #27847f;
+    color: #D0E7E5;
+}
+
+::-webkit-scrollbar {
+    width: .3rem; /* Ancho de la barra de scroll */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #27847f6c; /* Color de la barra de scroll */
+}
+
+@media(max-width: 768px) {
+    body {
+        height: auto;
+        text-align: center;
+    }
+
+    section.container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .container .list {
+        align-self: stretch;
+        height: 15rem;
+    }
+
+    .video iframe {
+        align-self: stretch;
+        width: 90vw;
+        height: 50.6vw;
+        margin-top: 5rem;
+    }
 }
