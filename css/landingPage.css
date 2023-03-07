@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    background-image: radial-gradient(#fe5738, #ef2f28 80%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+header.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.cabecera img.logo-kfc {
+    height: 6rem;
+}
+
+header.cabecera nav.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 3rem;
+}
+
+nav.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+main.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 6rem);
+    padding: 4rem;
+}
+
+main.contenido section.call-action {
+    width: 50%;
+    color: white;
+}
+
+section.call-action span.eslogan {
+    font-size: 6rem;
+}
+
+section.call-action p.descripcion {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+section.call-action button.btn-ordenar {
+    padding: 1rem 3rem;
+    /* width: 15rem;
+    height: 3rem; */
+    border-radius: 5rem;
+    border: none;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+section.call-action button.btn-ordenar:hover {
+    /* width: 15.5rem; */
+    transform: scaleX(101%);
+    letter-spacing: .1rem;
+    text-align: start;
+}
+
+section.call-action div.redes-sociales {
+    display: flex;
+    align-items: start;
+    gap: 1.6rem;
+    margin: 1.6rem 0 0 0;
+    font-size: 1.6rem;
+}
+
+section.call-action div.redes-sociales i:hover {
+    transform: translateY(-.4rem);
+    cursor: pointer;
+}
+
+main.contenido img.combo-kfc {
+    height: calc(100vh - 8rem);
+}
