@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6em;
+}
+
+div.menu button.btn-animado {
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4em;
+    box-shadow: 0 0 20px 0 #3333337e;
+    transition: all linear .2s;
+}
+
+div.menu button.btn-animado:hover {
+    width: 9em;
+    border-radius: 2em;
+}
+
+div.menu button.btn-animado:hover i {
+    display: none;
+}
+
+button.btn-animado#btn-house:hover {
+    background-image: linear-gradient(45deg, #BCF0E1, #50c5a4);
+    box-shadow: 0 0 20px 0 #50c5a4;
+}
+
+button.btn-animado#btn-house:hover::after {
+    content: 'HOME';
+    color: white;
+    font-weight: bold;
+}
+
+button.btn-animado#btn-messages:hover {
+    background-image: linear-gradient(45deg, #B4F7D0, #5fc98b);
+    box-shadow: 0 0 20px 0 #81f5b1;
+}
+
+button.btn-animado#btn-messages:hover::after {
+    content: 'MESSAGES';
+    color: white;
+    font-weight: bold;
+}
+
+button.btn-animado#btn-favorites:hover {
+    background-image: linear-gradient(45deg, #BDFBB5, #7eda72);
+    box-shadow: 0 0 20px 0 #93fa85;
+}
+
+button.btn-animado#btn-favorites:hover::after {
+    content: 'FAVORITES';
+    color: white;
+    font-weight: bold;
+}
+
+button.btn-animado#btn-videos:hover {
+    background-image: linear-gradient(45deg, #D6FC93, #a7d655);
+    box-shadow: 0 0 20px 0 #c4fa66;
+}
+
+button.btn-animado#btn-videos:hover::after {
+    content: 'VIDEOS';
+    color: white;
+    font-weight: bold;
+}
+
+button.btn-animado#btn-photos:hover {
+    background-image: linear-gradient(45deg, #F9F871, #d8d83b);
+    box-shadow: 0 0 20px 0 #f5f545;
+}
+
+button.btn-animado#btn-photos:hover::after {
+    content: 'PHOTOS';
+    color: white;
+    font-weight: bold;
+}
+
+@media(max-width: 768px) {
+    body {
+        height: auto;
+        padding: 4rem 0;
+        font-size: 20px;
+    }
+
+    div.menu {
+        flex-direction: column;
+    }
+}
