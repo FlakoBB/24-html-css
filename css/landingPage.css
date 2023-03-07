@@ -99,3 +99,54 @@ section.call-action div.redes-sociales i:hover {
 main.contenido img.combo-kfc {
     height: calc(100vh - 8rem);
 }
+
+@media(max-width: 1024px) {
+    main.contenido img.combo-kfc {
+        width: 25%;
+        height: auto;
+    }
+
+    main.contenido section.call-action {
+        width: 70%;
+    }
+}
+
+@media(max-width: 768px) {
+    body {
+        height: auto;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+    header.cabecera nav.menu {
+        display: none;
+    }
+
+    header.cabecera div.bars-menu {
+        display: block;
+        padding: 0 3rem;
+        font-size: 1.4rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    header.cabecera img.logo-kfc {
+        height: 4rem;
+    }
+
+    main.contenido img.combo-kfc {
+        display: none;
+    }
+
+    section.call-action span.eslogan {
+        font-size: 4rem;
+    }
+
+    main.contenido section.call-action {
+        flex-grow: 1;
+    }
+
+    section.call-action div.redes-sociales {
+        justify-content: center;
+    }
+}
