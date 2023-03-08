@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+section.amarillas {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+div.esfera-amarilla {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(255, 196, 0);
+    animation: esferaArribaA 6s linear infinite;
+}
+
+.esfera-amarilla#a-1 {
+    left: 5%;
+    transform: translateX(-5%);
+    animation-delay: .4s;
+    animation-duration: 2s;
+}
+
+.esfera-amarilla#a-2 {
+    left: 20%;
+    transform: translateX(-20%);
+    animation-delay: .7s;
+    animation-duration: 10s;
+}
+
+.esfera-amarilla#a-3 {
+    left: 35%;
+    transform: translateX(-35%);
+    animation-delay: .4s;
+    animation-duration: 4s;
+}
+
+.esfera-amarilla#a-4 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.esfera-amarilla#a-5 {
+    left: 65%;
+    transform: translateX(-65%);
+    animation-delay: .5s;
+    animation-duration: 2.5s;
+}
+
+.esfera-amarilla#a-6 {
+    left: 80%;
+    transform: translateX(-80%);
+    animation-delay: .2s;
+    animation-duration: 8s;
+}
+
+.esfera-amarilla#a-7 {
+    left: 95%;
+    transform: translateX(-95%);
+    animation-duration: 5s;
+}
+
+div.esfera-blanca {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(226, 255, 255);
+    box-shadow: 0 0 10px 1px rgb(226, 255, 255);
+    animation: esferaArribaB 6s linear infinite;
+}
+
+.esfera-blanca#b-1 {
+    left: 1%;
+    transform: translateX(-1%);
+    animation-duration: 7s;
+}
+
+.esfera-blanca#b-2 {
+    left: 12.5%;
+    transform: translateX(-12.5%);
+    animation-duration: 4s;
+}
+
+.esfera-blanca#b-3 {
+    left: 27.5%;
+    transform: translateX(-27.5%);
+    animation-duration: 1s;
+}
+
+.esfera-blanca#b-4 {
+    left: 42.5%;
+    transform: translateX(-42.5%);
+    animation-duration: 3s;
+}
+
+.esfera-blanca#b-5 {
+    left: 57.5%;
+    transform: translateX(-57.5%);
+    animation-duration: 8s;
+}
+
+.esfera-blanca#b-6 {
+    left: 72.5%;
+    transform: translateX(-72.5%);
+    animation-duration: 6s;
+}
+
+.esfera-blanca#b-7 {
+    left: 87.5%;
+    transform: translateX(-87.5%);
+    animation-duration: 10s;
+}
+
+.esfera-blanca#b-8 {
+    left: 99%;
+    transform: translateX(-99%);
+    animation-delay: .1s;
+}
+
+@keyframes esferaArribaA {
+    0% {
+        width: 0;
+        height: 0;
+        top: 100%;
+    }
+    100% {
+        width: 4em;
+        height: 4em;
+        top: -4em;
+    }
+}
+
+@keyframes esferaArribaB {
+    0% {
+        width: 0;
+        height: 0;
+        top: 100%;
+    }
+    100% {
+        width: 2em;
+        height: 2em;
+        top: -2em;
+    }
+}
