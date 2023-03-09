@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: darkslateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.tarjeta {
+    position: relative;
+    width: 20rem;
+    height: 30rem;
+    padding: 1em;
+    border-radius: 2rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    user-select: none;
+}
+
+/* Circulo de Fondo */
+div.tarjeta::before {
+    position: absolute;
+    content: '';
+    width: 20em;
+    height: 20em;
+    left: 6em;
+    top: -6em;
+    border-radius: 50%;
+    background-color: #baad53;
+    transition: all .3s linear;
+    z-index: -1;
+}
+
+/* % Hover que afecta al circulo en el fondo */
+div.tarjeta:hover::before {
+    width: 28em;
+    height: 24em;
+    left: -1em;
+    top: -9em;
+}
+
+/* texto en el fondo */
+div.tarjeta span#texto-bg {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+    font-weight: bolder;
+    font-size: 6em;
+    opacity: .1;
+    z-index: -2;
+}
+
+img#img-tenis {
+    position: absolute;
+    height: 10rem;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s linear
+}
+
+h1.titulo-tarjeta {
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .4s linear
+}
+
+div.tarjeta:hover #img-tenis {
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(10px 10px 10px #333);
+}
+
+div.tarjeta:hover .titulo-tarjeta {
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.detalle-tarjeta {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.detalle-tarjeta .nombre-detalle {
+    font-size: 1.3rem;
+}
+
+.detalle-tarjeta#size .num-size {
+    padding: .1rem .3rem;
+    border-radius: 50%;
+    background-color: white;
+    font-size: .8rem;
+    font-weight: bold;
+    color: black;
+}
+
+.detalle-tarjeta#color,
+.detalle-tarjeta#size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.detalle-tarjeta#color .muestra-color {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.muestra-color#rojo {
+    background-color: #BF0606;
+}
+
+.muestra-color#azul {
+    background-color: #2960AB;
+}
+
+.muestra-color#negro {
+    background-color: #000;
+}
+
+div.tarjeta:hover .detalle-tarjeta#size {
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    opacity: 1;
+}
+
+div.tarjeta:hover .detalle-tarjeta#color {
+    top: 23rem;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    opacity: 1;
+    transition-delay: .1s;
+}
+
+div.tarjeta:hover .detalle-tarjeta#btn-comprar {
+    top: 27rem;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.detalle-tarjeta#btn-comprar {
+    padding: .4rem 1rem;
+    background-color: #baad53;
+    border: none;
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
