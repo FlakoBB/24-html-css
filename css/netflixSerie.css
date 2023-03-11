@@ -9,10 +9,11 @@
 
 body {
     background-image: url('./../assets/images/TW_BG.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -75,7 +76,7 @@ main section.info {
     align-items: flex-start;
     justify-content: end;
     width: 60%;
-    height: calc(100% - 3rem);
+    height: calc(100vh - 3rem);
     padding: 0 5rem 2rem 5rem;
     color: white;
 }
@@ -124,6 +125,7 @@ section.info div.botones-principales button {
 
 section.info div.botones-principales button.play-btn {
     background-color: #e50914;
+    border: 1px solid #e50914;
 }
 
 section.info div.botones-principales button.play-btn:hover {
@@ -142,6 +144,7 @@ section.info div.botones-principales button.mylist-btn:hover {
 
 section.info button.trailer-btn {
     background: none;
+    border: none;
     color: white;
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -152,9 +155,79 @@ section.info button.trailer-btn:hover {
     opacity: .8;
 }
 
-main section.trailer-area {
+section.trailer-area {
     position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #b8060f;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.trailer-area iframe {
+    width: 50rem;
+    height: 28rem;
+}
+
+.trailer-area button {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.trailer-area button:hover {
+    opacity: .8;
+}
+
+
+@media (max-width: 1023px) {
+    main header {
+        flex-direction: column;
+        justify-content: center;
+        gap: .6rem;
+        padding: 0 1rem;
+    }
+
+    main section.info {
+        width: 80%;
+        height: calc(100vh - 7rem);
+        justify-content: center;
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    main section.info {
+        width: 100%;
+    }
+
+    header nav.menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    nav.menu a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    section.info img.logo-serie {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    section.info {
+        background-color: green;
+    }
 }

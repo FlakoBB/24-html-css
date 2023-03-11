@@ -42,16 +42,34 @@
                 <button class="play-btn">PLAY</button>
                 <button class="mylist-btn">MY LIST</button>
             </div>
-            <button class="trailer-btn">
+            <button onclick="abrirVideo()" class="trailer-btn">
                 <i class="fa-solid fa-circle-play"></i>
                 WATCH TRAILER
             </button>
         </section>
-
+        
         <!-- Seccion del video -->
-        <!-- <section class="trailer-area">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BmHM5eUp9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section> -->
+        <section id="trailer-area" class="trailer-area">
+            <button onclick="cerrarVideo()" id="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            <iframe id="iframe" src="https://www.youtube.com/embed/BmHM5eUp9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
     </main>
 </body>
+<script>
+    const video = document.getElementById('iframe')
+
+    const abrirVideo = () => {
+        document.getElementById('trailer-area').style.display = 'flex'
+        // video.onload = () => { // Funcion que inicia el video cuando se muestra
+        //     video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
+        // }
+    }
+
+    const cerrarVideo = () => {
+        document.getElementById('trailer-area').style.display = 'none'
+        // Pausa el video cuando se oculta
+        video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*') 
+        video.src = video.src // Reinici el video
+    }
+</script>
 </html>
