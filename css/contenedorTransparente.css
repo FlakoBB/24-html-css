@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('./../assets/images/backgPlastilina.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 2rem 0;
+    border-radius: 2rem;
+    border: inset 1px #ffffff73;
+    width: 25rem;
+    background-color: rgba(187, 187, 187, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.contenedor .titulo {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    color: #f27420;
+}
+
+.contenedor .personaje {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    width: 100%;
+    padding: .5rem;
+    height: 5rem;
+    border-radius: .6rem;
+    background-color: rgba(63, 63, 63, 0.2);
+    overflow: hidden;
+    transition: all .2s linear;
+}
+
+.contenedor .personaje:hover {
+    background-color: #fff;
+    transform: translate(10%, -10%);
+}
+
+.personaje img {
+    height: 100%;
+    border-radius: .4rem;
+}
+
+.personaje .datos-personaje {
+    color: white;
+    transition: all .2s linear;
+}
+
+.contenedor .personaje:hover .datos-personaje {
+    color: #000;
+}
+
+.datos-personaje .nombre-personaje {
+    font-size: 1.2rem;
+}
+
+.datos-personaje .actividad-personaje {
+    font-size: .8rem;
+}
+
+.personaje .numero-personaje {
+    position: absolute;
+    right: -10%;
+    transition: all .2s linear;
+    color: white;
+    font-weight: bold;
+}
+
+.numero-personaje .simbolo-numero {
+    font-size: 1.6rem;
+    opacity: .6;
+}
+
+.personaje:hover .numero-personaje {
+    right: 3rem;
+    font-size: 2.5rem;
+    color: #f27420;
+}
+
+@media(max-width: 768px) {
+    .contenedor {
+        width: 80%;
+    }
+}
