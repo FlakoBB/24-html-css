@@ -42,6 +42,7 @@ body {
     background-color: rgba(184, 161, 214, .2);
     backdrop-filter: blur(20px);
     color: #FEFEDF;
+    z-index: 0;
 }
 
 .login-form .title-form {
@@ -96,7 +97,11 @@ body {
     color: #FEFEDF;
 }
 
-/* animations */
+/* ? animations */
+
+.back-form {
+    position: relative;
+}
 
 .container-form .square {
     position: absolute;
@@ -106,10 +111,54 @@ body {
     border-top: 1px solid #FEFEDF;
     border-left: 1px solid #FEFEDF;
     background-color: rgba(153, 106, 231, .2);
-    backdrop-filter: blur(150px);
+    backdrop-filter: blur(30px);
+}
+
+#square-2,
+#square-3,
+#square-4 {
+    z-index: -2;
+}
+
+#square-1,
+#square-5 {
+    z-index: 1;
+}
+
+.square#square-1 {
     left: -5rem;
     top: 10rem;
-    animation: up-and-down 1.5s infinite alternate linear;
+    animation: up-and-down 2.5s infinite alternate linear;
+}
+
+.square#square-2 {
+    right: -2rem;
+    top: -3rem;
+    animation: up-and-down 3s infinite alternate linear;
+}
+
+.square#square-3 {
+    width: 3rem;
+    height: 3rem;
+    left: 7rem;
+    top: -2rem;
+    animation: up-and-down 3s infinite alternate-reverse linear;
+}
+
+.square#square-4 {
+    width: 3rem;
+    height: 3rem;
+    left: 5rem;
+    bottom: -3rem;
+    animation: up-and-down 4s infinite alternate-reverse linear;
+}
+
+.square#square-5 {
+    width: 4rem;
+    height: 4rem;
+    right: -2rem;
+    bottom: 2rem;
+    animation: up-and-down 3.5s infinite alternate-reverse linear;
 }
 
 @keyframes up-and-down {
@@ -118,5 +167,13 @@ body {
     }
     100%{
         transform: translateY(2rem);
+    }
+}
+
+/* ? responsive */
+
+@media (max-width: 458px) {
+    .container-form .login-form {
+        width: 76vw;
     }
 }
