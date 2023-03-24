@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+:root {
+    --morado: #996AE7;
+    --moradoDos: #B8A1D6;
+    --crema: #FEFEDF;
+    --azul: #64BAA9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    background-image: url(../assets/images/BG_Amatista.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-form {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(254, 254, 223, .2);
+    backdrop-filter: blur(30px);
+}
+
+.container-form .login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(184, 161, 214, .2);
+    backdrop-filter: blur(20px);
+    color: #FEFEDF;
+}
+
+.login-form .title-form {
+    font-size: 1.8rem;
+}
+
+.login-form hr.line {
+    width: 4rem;
+    height: 2px;
+    border: none;
+    border-radius: .2rem;
+    margin: .4rem 0 1.2rem 0;
+    background-color: #FEFEDF;
+}
+
+.login-form input {
+    align-self: stretch;
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    margin-bottom: .8rem;
+    background-color: rgba(254, 254, 223, 0.2);
+    font-size: 1.1rem;
+    color: #FEFEDF;
+    font-weight: bold;
+    outline: none;
+}
+
+::placeholder {
+    color: #FEFEDF;
+    font-weight: bold;
+}
+
+.login-form .btn-login {
+    padding: .6rem 1.4rem;
+    border: none;
+    border-radius: 2rem;
+    margin-bottom: 1.2rem;
+    outline: none;
+    background-color: #FEFEDF;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.login-form p {
+    margin-bottom: .4rem;
+}
+
+.login-form p a {
+    color: #FEFEDF;
+}
+
+/* animations */
+
+.container-form .square {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: .6rem;
+    border-top: 1px solid #FEFEDF;
+    border-left: 1px solid #FEFEDF;
+    background-color: rgba(153, 106, 231, .2);
+    backdrop-filter: blur(150px);
+    left: -5rem;
+    top: 10rem;
+    animation: up-and-down 1.5s infinite alternate linear;
+}
+
+@keyframes up-and-down {
+    0% {
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translateY(2rem);
+    }
+}
