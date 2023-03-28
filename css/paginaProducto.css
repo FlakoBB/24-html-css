@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background: no-repeat fixed
+        linear-gradient(to bottom, #bcae42, #9a9346, #7b7947, #5f5f46, #454543);
+}
+
+body .background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    font-weight: bolder;
+    font-size: 25vw;
+    color: whitesmoke;
+    opacity: .1;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.6rem;
+    padding: .3rem 3rem;
+    font-size: 1.4rem;
+    color: whitesmoke;
+}
+
+header .logo {
+    height: 100%;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 100vw;
+    height: calc(100vh - 3.6rem);
+    padding: 1rem 3rem;
+}
+
+main .product {
+    height: 30vw;
+    animation: up-down 1s alternate infinite linear;
+}
+
+main .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info .description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: .5rem;
+    width: 50%;
+    color: whitesmoke;
+}
+
+.description .btn-details {
+    padding: .5rem 1.2rem;
+    border-radius: .2rem;
+    background-color: whitesmoke;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #454543;
+    letter-spacing: .2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.info .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: stretch;
+    color: whitesmoke;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(-10%);
+    }
+}
+
+@media (max-height: 512px) {
+    .info .description {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    main .product {
+        height: 50vw;
+    }
+
+    main .info {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    .info .description {
+        width: 100%;
+    }
+
+    .info .contact {
+        flex-direction: row;
+        align-self: self-start;
+        gap: 1.5rem;
+    }
+}
