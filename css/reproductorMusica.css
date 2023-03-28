@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background:
+        no-repeat
+        fixed
+        linear-gradient(to right bottom, #DC5A28, #806156);
+}
+
+.reproductor {
+    width: 18rem;
+    border-radius: 1rem;
+    background-color: #f1f3f4;
+    box-shadow: 0 30px 20px 10px #0000007a;
+    overflow: hidden;
+}
+
+.reproductor .imagen-box {
+    width: 100%;
+}
+
+.imagen-box img {
+    width: 100%;
+}
+
+.reproductor audio {
+    width: 100%;
+    background: whitesmoke;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 512px) {
+    .reproductor {
+        width: 80vw;
+    }
+}
