@@ -7,12 +7,20 @@
     font-family: 'Gruppo', cursive;
 }
 
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: #585858;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #077c99;
+}
+
 .landing-page {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* background-image: url('./../assets/images/BG_Montañas1.jpg'); */
-    background-color: aliceblue;
+    background-image: url('./../assets/images/BG_Montañas1.jpg');
     background-position: center center;
     color: white;
     z-index: 1;
@@ -75,10 +83,10 @@
     font-size: 1.2rem;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .info {
-    border: 1px red solid;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,6 +123,7 @@
     padding: .6rem 2rem;
     font-size: 1.2rem;
     border-radius: .4rem;
+    cursor: pointer;
 }
 
 .info .info-image {
@@ -132,8 +141,163 @@
 }
 
 .illustration {
+    position: relative;
     width: 100%;
     height: 100vh;
     background-image: url('./../assets/images/BG_Playa.jpg');
     background-position: center center;
+    z-index: 0;
+}
+
+.illustration::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    box-shadow: 0 -10px 30px 60px #121212, 0 10px 30px 60px #121212;
+    z-index: 1;
+}
+
+.cards-info .cards-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.cards-info .cards-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.cards .cards-info {
+    padding: .2rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.cards .cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem 3rem;
+}
+
+.cards-container .card {
+    position: relative;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: opacity .2s linear;
+}
+
+.cards-container:hover .card {
+    opacity: .4;
+}
+
+.cards-container .card:hover {
+    opacity: 1;
+}
+
+.card .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card-image img {
+    height: 100%;
+}
+
+.card .card-details {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #232323;
+    text-align: center;
+    color: white;
+}
+
+.cards button {
+    padding: .6rem 2rem;
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 4rem;
+    background-image: url('./../assets/images/BG_Montañas1.jpg');
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    z-index: 0;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: -1;
+}
+
+.footer .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.footer .copyright {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.copyright i {
+    font-size: 1rem;
+}
+
+.copyright .author {
+    color: white
 }
