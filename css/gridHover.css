@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gruppo', cursive;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 2rem 6rem;
+    background-color: #423756;
+}
+
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 40vh);
+}
+
+.grid-container .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #554772;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.card .card-info{
+    text-align: center;
+    transform: scale(0);
+    user-select: none;
+    opacity: 0;
+    transition: transform .8s ease-out;
+}
+
+.card .card-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    transition: all .8s ease-out;
+}
+
+.card:hover .card-cover {
+    position: static;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.card:hover .card-info {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card .card-cover.design {
+    background-color: #45affc;
+}
+
+.card .card-cover.development {
+    background-color: #ff7594;
+}
+
+.card .card-cover.search {
+    background-color: #39db93;
+}
+
+.card .card-cover.charts {
+    background-color: #ffb100;
+}
+
+.card .card-cover.video {
+    background-color: #2faa83;
+}
+
+.card .card-cover.game {
+    background-color: #d76dfe;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    body {
+        padding: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 40vw);
+    }
+}
+
+@media (max-width: 512px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 60vw);
+    }
+}
