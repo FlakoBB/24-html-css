@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gruppo', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: azure;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem 3rem;
+    height: 100dvh;
+    padding: 4rem 0;
+}
+
+.cards-container .card-base {
+    width: 22rem;
+    height: 30rem;
+    padding: 1.5rem;
+    border: 3px solid #fff;
+    border-radius: 1rem;
+    background-color: #ffffff7a;
+    backdrop-filter: blur(10px);
+    /* box-shadow: 5px 5px 10px 0 #33333370; */
+    box-shadow: 4px 4px 10px 0 #3333338f,
+                inset 4px 4px 10px 0 #3333332d;
+}
+
+.card-base .card {
+    position: relative;
+    height: 100%;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    background-color: azure;
+    box-shadow: 0 0 20px 1px #33333370;
+    overflow: hidden;
+    transition: all 250ms linear;
+}
+
+.card .bg-text {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.8rem;
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(245, 245, 245, .1);
+    z-index: -1;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    height: 100%;
+    text-align: center;
+    color: #333;
+    user-select: none;
+}
+
+.card:hover {
+    transform: translateY(-4rem);
+    background-image: linear-gradient(to right top, #a275b7, #a364bb, #a552bf, #a73ac1, #a90fc2);
+}
+
+.card:hover .card-content {
+    color: whitesmoke;
+}
+
+.card-content .card-btn {
+    padding: .6rem 1.6rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    background-color: dodgerblue;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.card:hover .card-btn {
+    background-color: hotpink;
+    cursor: pointer;
+}
+
+@media (max-width: 512px) {
+    .cards-container .card-base {
+        width: 80%;
+    }
+}
