@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gruppo', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    background-image: radial-gradient(circle, #bebebe, #919191, #666666, #3f3f3f, #1b1b1b);
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.switch-container .switch-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40rem;
+    height: 16rem;
+}
+
+.switch .slider {
+    position: absolute;
+    border-radius: 10rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 6px solid #1b1b1b;
+    background-color: #303030;
+    cursor: pointer;
+}
+
+.slider .slider-imgs {
+    position: relative;
+    height: 100%;
+    width: 15rem;
+    transition: .6s;
+}
+
+.slider-imgs .cup {
+    height: 100%;
+}
+
+.slider-imgs .coffee {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.switch input:checked ~ .slider .slider-imgs {
+    transform: translateX(24.3rem) rotateZ(540deg);
+}
+
+.switch input:checked ~ .slider .slider-imgs .coffee {
+    opacity: 1;
+}
+
+/* Sombra al texto */
+.switch-container .switch-text.shadow {
+    font-weight: bolder;
+    text-shadow: 0 0 5px #fff;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+    .switch-container {
+        transform: scale(60%);
+    }
+}
+
+@media (max-width:512px) {
+    .switch-container {
+        transform: scale(30%);
+    }
+}

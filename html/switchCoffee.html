@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Switch</title>
+    <link rel="icon" href="./../assets/images/Icono_FLK_Azul.ico">
+    <link rel="stylesheet" href="./../css/switchCoffee.css">
+</head>
+<body>
+    <div class="switch-container">
+        <span class="switch-text off shadow">OFF</span>
+        <label for="switch-check" class="switch">
+            <input type="checkbox" id="switch-check" hidden>
+            <div class="slider">
+                <div class="slider-imgs">
+                    <img class="cup" src="./../assets/images/IMG_TazaVacia.png" alt="IMG_TazaVacia">
+                    <img class="coffee" src="./../assets/images/IMG_Cafe.png" alt="IMG_Cafe">
+                </div>
+            </div>
+        </label>
+        <span class="switch-text on">ON</span>
+    </div>
+</body>
+<script type="text/javascript">
+    const input = document.getElementById('switch-check')
+    const switchText = document.querySelectorAll('.switch-text')
+
+    input.addEventListener('click', () => {
+        switchText.forEach(text => {
+            text.classList.toggle('shadow')
+        })
+    })
+</script>
+</html>
