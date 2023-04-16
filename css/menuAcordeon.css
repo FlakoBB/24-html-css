@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gruppo', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background-color: azure;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 60%;
+}
+
+.menu-container .title {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.menu-container details {
+    position: relative;
+    width: 80%;
+    padding: .8rem 1.6rem;
+    border-radius: .4rem;
+    background-color: white;
+    box-shadow: 0 4px 30px 2px #33333375;
+    z-index: 1;
+}
+
+.menu-container details[open]#pregunta1 {
+    background-image: linear-gradient(to right bottom, #05cb0c, #44d142, #63d662, #7ddb7f, #96df99);
+}
+
+.menu-container details[open]#pregunta2 {
+    background-image: linear-gradient(to right bottom, #0577cb, #1b8fd3, #44a6d7, #6dbcda, #96d0df);
+}
+
+.menu-container details[open]#pregunta3 {
+    background-image: linear-gradient(to right bottom, #cb05c4, #cf44cc, #d363d3, #d77eda, #db96df);
+}
+
+.menu-container details[open]#pregunta4 {
+    background-image: linear-gradient(to right bottom, #cb7c05, #d38b36, #d99958, #dda977, #dfb896);
+}
+
+details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+details summary i {
+    font-size: 1.2rem;
+    color: #333;
+    opacity: .2;
+    transform: rotateZ(45deg);
+    transition: transform 600ms linear;
+}
+
+details:hover i {
+    opacity: 1;
+}
+
+details[open] summary i {
+    color: white;
+    transform: rotateZ(270deg);
+    opacity: 1;
+}
+
+details[open] summary {
+    margin-bottom: 1rem;
+}
+
+details p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+details[open]::before {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    opacity: .3;
+    z-index: -1;
+}
+
+details[open]#pregunta1::before {
+    content: '01';
+}
+
+details[open]#pregunta2::before {
+    content: '02';
+}
+
+details[open]#pregunta3::before {
+    content: '03';
+}
+
+details[open]#pregunta4::before {
+    content: '04';
+}
+
+details summary .question-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+details summary .question-container .num {
+    display: grid;
+    place-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: .4rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+details#pregunta1 summary .question-container .num {
+    background-image: linear-gradient(to right bottom, #05cb0c, #44d142, #63d662, #7ddb7f, #96df99);
+}
+
+details#pregunta2 summary .question-container .num {
+    background-image: linear-gradient(to right bottom, #0577cb, #1b8fd3, #44a6d7, #6dbcda, #96d0df);
+}
+
+details#pregunta3 summary .question-container .num {
+    background-image: linear-gradient(to right bottom, #cb05c4, #cf44cc, #d363d3, #d77eda, #db96df);
+}
+
+details#pregunta4 summary .question-container .num {
+    background-image: linear-gradient(to right bottom, #cb7c05, #d38b36, #d99958, #dda977, #dfb896);
+}
+
+details[open] summary .question-container .num {
+    display: none;
+}
+
+details summary .question-container .question {
+    padding: .2rem .8rem;
+    border-radius: .2rem;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        width: 100%;
+    }
+
+    .menu-container details {
+        width: 100%;
+    }
+}

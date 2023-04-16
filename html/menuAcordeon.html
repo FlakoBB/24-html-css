@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Acordeon</title>
+    <link rel="icon" href="./../assets/images/Icono_FLK_Azul.ico">
+    <link rel="stylesheet" href="./../css/menuAcordeon.css">
+    <script src="https://kit.fontawesome.com/b082e0647c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="menu-container">
+        <h1 class="title">Preguntas Frecuentes</h1>
+        <details id="pregunta1" class="accordion-question">
+            <summary>
+                <div class="question-container">
+                    <span class="num">01</span>
+                    <h2 class="question">¿Qué es Lorem?</h2>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde, assumenda laudantium aperiam rerum nobis aspernatur ipsum accusamus odit quidem sapiente et tenetur excepturi rem deserunt temporibus neque magni in?</p>
+        </details>
+        <details id="pregunta2" class="accordion-question">
+            <summary>
+                <div class="question-container">
+                    <span class="num">02</span>
+                    <h2 class="question">¿Para que es Lorem?</h2>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde, assumenda laudantium aperiam rerum nobis aspernatur ipsum accusamus odit quidem sapiente et tenetur excepturi rem deserunt temporibus neque magni in?</p>
+        </details>
+        <details id="pregunta3" class="accordion-question">
+            <summary>
+                <div class="question-container">
+                    <span class="num">03</span>
+                    <h2 class="question">¿Como usar Lorem?</h2>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde, assumenda laudantium aperiam rerum nobis aspernatur ipsum accusamus odit quidem sapiente et tenetur excepturi rem deserunt temporibus neque magni in?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde, assumenda laudantium aperiam rerum nobis aspernatur ipsum accusamus odit quidem sapiente et tenetur excepturi rem deserunt temporibus neque magni in?</p>
+        </details>
+        <details id="pregunta4" class="accordion-question">
+            <summary>
+                <div class="question-container">
+                    <span class="num">04</span>
+                    <h2 class="question">¿Lorem es gratis?</h2>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde, assumenda laudantium aperiam rerum nobis aspernatur ipsum accusamus odit quidem sapiente et tenetur excepturi rem deserunt temporibus neque magni in?</p>
+        </details>
+    </section>
+</body>
+<script>
+    const accordions = document.querySelectorAll('.accordion-question')
+
+    accordions.forEach(accordion => {
+        accordion.addEventListener('click', (event) => {
+            event.preventDefault()
+            if(accordion.hasAttribute('open')) {
+                accordion.removeAttribute('open')
+            } else {
+                accordions.forEach(otherAccordion => {
+                    if(otherAccordion.hasAttribute('open')) {
+                        otherAccordion.removeAttribute('open')
+                    }
+                })
+                accordion.setAttribute('open', 'true')
+            }
+        })
+    })
+</script>
+</html>
