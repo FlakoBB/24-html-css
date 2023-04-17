@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gruppo', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-image: linear-gradient(to top, #2960ab, #2d86bc, #5ca8c7, #95c9d2, #d0e7e5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 1rem;
+}
+
+.cards-container .card {
+    position: relative;
+    width: 18rem;
+    height: 26rem;
+    border-radius: 1rem;
+    background-color: #333;
+    overflow: hidden;
+    transition: all 200ms linear;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 10px #2d86bc;
+}
+
+.card:hover .info-container {
+    backdrop-filter: blur(4px);
+    top: 0;
+}
+
+.card:hover .tasm-cover {
+    transform: translateY(-3rem) scale(1.1);
+}
+
+.card .tasm-cover {
+    width: 100%;
+    transition: all 200ms linear;
+}
+
+.card .info-container {
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 200ms linear;
+}
+
+.info-container .movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 65%;
+    bottom: 0;
+    left: 0;
+    padding: 0 .8rem .4rem .8rem;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0 -10px 30px 30px rgb(22, 22, 22);
+}
+
+.movie-info .movie-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.movie-info .movie-category span {
+    padding: .2rem;
+    border-radius: .2rem;
+}
+
+.movie-category .fiction {
+    background-color: dodgerblue;
+}
+
+.movie-category .heroes {
+    background-color: tomato;
+}
+
+.movie-info .movie-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.movie-rating .stars {
+    color: yellow;
+}
+
+.movie-rating .stars-number {
+    font-size: 1.2rem;
+}
+
+.movie-info .tasm-title {
+    width: 80%;
+}
+
+.movie-info .cast .cast-title {
+    margin-bottom: .6rem;
+}
+
+.movie-info .cast .actors {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .8rem;
+}
+
+.cast .actors .actor {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 4px solid #d0e7e5;
+    overflow: hidden;
+}
+
+.actors .actor img {
+    width: 100%;
+}
